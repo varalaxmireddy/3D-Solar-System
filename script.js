@@ -414,3 +414,16 @@ class SolarSystem {
 window.addEventListener('load', () => {
     new SolarSystem();
 });
+
+// Extra responsiveness setup for global access (without editing class code)
+window.addEventListener('load', () => new SolarSystem());
+
+window.addEventListener('load', () => {
+  const canvas = document.querySelector('canvas');
+  if (canvas) {
+    canvas.style.width = '100%';
+    canvas.style.height = '100%';
+
+  }
+});
+

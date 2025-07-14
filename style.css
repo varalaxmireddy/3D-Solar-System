@@ -1,3 +1,4 @@
+/* Base Reset */
 * {
     margin: 0;
     padding: 0;
@@ -9,6 +10,12 @@ body {
     background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
     overflow: hidden;
     color: white;
+    height: 100%;
+}
+
+html {
+    height: 100%;
+    overflow: auto;
 }
 
 #canvas-container {
@@ -50,7 +57,7 @@ body {
     -webkit-appearance: none;
     height: 6px;
     border-radius: 3px;
-    background: #333;
+    background: #555;
     outline: none;
     margin-bottom: 5px;
 }
@@ -163,7 +170,6 @@ body {
     z-index: 200;
 }
 
-/* Planet label tooltip */
 #planet-label {
     position: absolute;
     background: rgba(0, 0, 0, 0.9);
@@ -197,11 +203,15 @@ body {
     #control-panel {
         max-width: 250px;
         font-size: 11px;
+        padding-bottom: 40px;
     }
-    
+
     #info-panel {
         font-size: 10px;
         max-width: 200px;
+        top: 20px;
+        bottom: auto;
+        right: 20px;
     }
 
     #planet-label {
@@ -215,6 +225,19 @@ body {
 
     #planet-label .planet-fact {
         font-size: 10px;
+    }
+
+    /* Make canvas responsive on mobile */
+    #canvas-container {
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    canvas {
+        width: 100% !important;
+        height: 100% !important;
+        display: block;
     }
 }
 
