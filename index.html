@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Solar System Simulation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="canvas-container">
+        <div class="loading" id="loading">Loading Solar System...</div>
+
+        <div id="control-panel">
+            <h3>Solar System Controls</h3>
+
+            <div class="main-controls">
+                <button class="btn btn-primary" id="pauseBtn">Pause</button>
+                <button class="btn btn-secondary" id="themeBtn">Dark Mode</button>
+            </div>
+
+            <div class="planet-controls">
+                <!-- Repeat this for all planets -->
+                <div class="planet-control mercury">
+                    <label for="mercury-speed">Mercury</label>
+                    <input type="range" class="speed-slider" id="mercury-speed" min="0" max="5" value="1" step="0.1">
+                    <div class="speed-value" id="mercury-value">1.0x</div>
+                </div>
+
+                <!-- Venus -->
+                <div class="planet-control venus">
+                    <label for="venus-speed">Venus</label>
+                    <input type="range" class="speed-slider" id="venus-speed" min="0" max="5" value="1" step="0.1">
+                    <div class="speed-value" id="venus-value">1.0x</div>
+                </div>
+
+                <!-- Earth -->
+                <div class="planet-control earth">
+                    <label for="earth-speed">Earth</label>
+                    <input type="range" class="speed-slider" id="earth-speed" min="0" max="5" value="1" step="0.1">
+                    <div class="speed-value" id="earth-value">1.0x</div>
+                </div>
+
+                <!-- Mars -->
+                <div class="planet-control mars">
+                    <label for="mars-speed">Mars</label>
+                    <input type="range" class="speed-slider" id="mars-speed" min="0" max="5" value="1" step="0.1">
+                    <div class="speed-value" id="mars-value">1.0x</div>
+                </div>
+
+                <!-- Jupiter -->
+                <div class="planet-control jupiter">
+                    <label for="jupiter-speed">Jupiter</label>
+                    <input type="range" class="speed-slider" id="jupiter-speed" min="0" max="5" value="1" step="0.1">
+                    <div class="speed-value" id="jupiter-value">1.0x</div>
+                </div>
+
+                <!-- Saturn -->
+                <div class="planet-control saturn">
+                    <label for="saturn-speed">Saturn</label>
+                    <input type="range" class="speed-slider" id="saturn-speed" min="0" max="5" value="1" step="0.1">
+                    <div class="speed-value" id="saturn-value">1.0x</div>
+                </div>
+
+                <!-- Uranus -->
+                <div class="planet-control uranus">
+                    <label for="uranus-speed">Uranus</label>
+                    <input type="range" class="speed-slider" id="uranus-speed" min="0" max="5" value="1" step="0.1">
+                    <div class="speed-value" id="uranus-value">1.0x</div>
+                </div>
+
+                <!-- Neptune -->
+                <div class="planet-control neptune">
+                    <label for="neptune-speed">Neptune</label>
+                    <input type="range" class="speed-slider" id="neptune-speed" min="0" max="5" value="1" step="0.1">
+                    <div class="speed-value" id="neptune-value">1.0x</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="info-panel">
+            <h4>Instructions:</h4>
+            <p>• Use sliders to control planet speeds</p>
+            <p>• Click and drag to rotate view</p>
+            <p>• Scroll to zoom in/out</p>
+            <p>• Hover over planets for names and facts</p>
+        </div>
+
+        <div id="planet-label">
+            <div class="planet-name"></div>
+            <div class="planet-fact"></div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
